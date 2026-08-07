@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kondi — Multi-LLM Council Pipelines for the Desktop</title>
-<meta name="description" content="Kondi is a desktop app for building multi-LLM workflow pipelines — visual graphs where each step is a deliberating council of models from any provider (Claude, GPT, DeepSeek, NVIDIA NIM, Ollama), with human gates, script checks, and feedback loops.">
+<meta name="description" content="Free, open-source desktop app for building multi-LLM workflow pipelines — visual graphs where each step is a deliberating council of models from any provider (Claude, GPT, DeepSeek, NVIDIA NIM, Ollama), with human gates, script checks, and feedback loops.">
 <link rel="canonical" href="https://kondi.ai/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0C1210" media="(prefers-color-scheme: dark)">
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kondi">
 <meta property="og:title" content="Kondi — Multi-LLM Council Pipelines for the Desktop">
-<meta property="og:description" content="Build LLM workflow pipelines as visual graphs where every step is a deliberating council of models from any provider — with gates, script checks, and feedback loops. Proof over plausibility.">
+<meta property="og:description" content="Free &amp; open source. Build LLM workflow pipelines as visual graphs where every step is a deliberating council of models from any provider — with gates, script checks, and feedback loops. Proof over plausibility.">
 <meta property="og:url" content="https://kondi.ai/">
 <meta property="og:image" content="https://kondi.ai/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
 <meta property="og:image:alt" content="Kondi — Don't prompt a model. Convene a council.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kondi — Multi-LLM Council Pipelines for the Desktop">
-<meta name="twitter:description" content="Build LLM workflow pipelines as visual graphs where every step is a deliberating council of models from any provider — gates, script checks, feedback loops. Proof over plausibility.">
+<meta name="twitter:description" content="Free &amp; open source. Build LLM workflow pipelines as visual graphs where every step is a deliberating council of models from any provider — gates, script checks, feedback loops. Proof over plausibility.">
 <meta name="twitter:image" content="https://kondi.ai/og-image.png">
 
 <!-- Structured data: software product -->
@@ -154,9 +154,23 @@ img{max-width:100%;}
   }
   h1 .convene { color: var(--accent); }
   .hero .lede {
-    font-size: 19px; color: var(--ink-soft); max-width: 41em; margin: 0 0 30px; text-wrap: pretty;
+    font-size: 19px; color: var(--ink-soft); max-width: 41em; margin: 0 0 26px; text-wrap: pretty;
   }
-  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
+  .free-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 13px; letter-spacing: .03em;
+    color: var(--accent); background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    border-radius: 999px; padding: 7px 15px; margin: 0 0 20px;
+  }
+  .free-badge b { font-weight: 700; }
+  .free-badge .dot { color: color-mix(in srgb, var(--accent) 55%, transparent); }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
+  .cta-note {
+    font-family: var(--mono); font-size: 12.5px; color: var(--ink-faint);
+    margin: 0 0 44px; letter-spacing: .02em;
+  }
+  .closing .cta-note { text-align: center; }
   .btn {
     display: inline-block; text-decoration: none; border-radius: 8px;
     padding: 11px 22px; font-size: 15px; font-weight: 600;
@@ -442,13 +456,15 @@ img{max-width:100%;}
 
 <header class="hero" id="top">
   <div class="wrap">
+    <span class="free-badge"><b>100% free &amp; open source</b> <span class="dot">·</span> no account <span class="dot">·</span> your keys or free NVIDIA credits</span>
     <span class="anno">desktop llm orchestration · pipelines of councils</span>
     <h1>Don't prompt a model.<br><span class="convene">Convene a council.</span></h1>
-    <p class="lede">Kondi is a desktop studio for assembling LLM workflow pipelines — visual graphs where every step is a <b>deliberating council</b> of models from any provider, wired together with human gates, mechanical checks, and loops that carry feedback. Built for work you need to be <i>right</i>, not just plausible.</p>
+    <p class="lede"><b>Free and open source.</b> Kondi is a desktop studio for assembling LLM workflow pipelines — visual graphs where every step is a <b>deliberating council</b> of models from any provider, wired together with human gates, mechanical checks, and loops that carry feedback. No fees and no account — bring your own API keys, or run councils on free NVIDIA credits. Built for work you need to be <i>right</i>, not just plausible.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://github.com/thisPointOn/kondi/releases">Download for desktop</a>
+      <a class="btn btn-primary" href="https://github.com/thisPointOn/kondi/releases">Download free</a>
       <a class="btn btn-secondary" href="#/examples">See it proven end-to-end</a>
     </div>
+    <p class="cta-note">Free forever · open source · macOS · Windows · Linux · run councils on free NVIDIA NIM credits</p>
 
     <figure class="shot-frame hero-shot">
       <div class="chrome"><i></i><i></i><i></i><span>kondi — pipeline builder</span></div>
@@ -668,12 +684,13 @@ img{max-width:100%;}
 
   <div class="closing">
     <div class="wrap">
-      <h2>Assemble your first pipeline tonight.</h2>
-      <p>Download Kondi, paste one API key (or grab free NVIDIA NIM credits), and click together a council pipeline on the graph. The examples import in one click.</p>
+      <h2>Assemble your first pipeline tonight — free.</h2>
+      <p>Download Kondi, paste one API key (or grab free NVIDIA NIM credits), and click together a council pipeline on the graph. No account, no fees. The examples import in one click.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://github.com/thisPointOn/kondi/releases">Download for desktop</a>
+        <a class="btn btn-primary" href="https://github.com/thisPointOn/kondi/releases">Download free</a>
         <a class="btn btn-secondary" href="https://github.com/thisPointOn/kondi">Star on GitHub</a>
       </div>
+      <p class="cta-note">Free forever · open source · macOS · Windows · Linux</p>
     </div>
   </div>
 </main>
